@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О приложении</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 0;
+        }
+        .about-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Навигационное меню -->
+        <ul class="nav nav-pills justify-content-center mb-4">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Главная</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="/about/">О приложении</a>
+            </li>
+        </ul>
+
+        <!-- Информация о приложении -->
+        <div class="about-card">
+            <h1 class="text-center mb-4">📱 О приложении</h1>
+            <p class="lead">Это простое Flask веб-приложение для отображения текущей даты и времени.</p>
+
+            <h3 class="mt-4">Возможности:</h3>
+            <ul>
+                <li>Отображение текущего времени</li>
+                <li>Показ дня недели на русском языке</li>
+                <li>Форматирование даты в разных форматах</li>
+                <li>Простой и понятный интерфейс</li>
+            </ul>
+
+            <h3 class="mt-4">Технологии:</h3>
+            <ul>
+                <li>Python 3</li>
+                <li>Flask Framework</li>
+                <li>Bootstrap 5</li>
+                <li>HTML5 & CSS3</li>
+            </ul>
+
+            <div class="text-center mt-4">
+                <a href="/" class="btn btn-primary">⬅ Вернуться на главную</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
