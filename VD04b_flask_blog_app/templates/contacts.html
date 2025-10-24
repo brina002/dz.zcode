@@ -1,10 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- {{ title }} - заголовок страницы из Python -->
+    <title>{{ title }}</title>
+    <!-- Подключение Bootstrap CDN для стилизации -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #AED6AF ;
+            min-height: 100vh;
+            padding: 40px 0;
+        }
+        .content-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+        }
+        /* Стили для блока с контактной информацией */
+        .contact-info {
+            /* Светло-серый фон */
+            background: #f8f9fa;
+            /* Скругленные углы */
+            border-radius: 10px;
+            /* Внутренние отступы */
+            padding: 30px;
+            /* Внешний отступ снизу */
+            margin-bottom: 30px;
+        }
+        /* Стили для отдельного элемента контакта */
+        .contact-item {
+            /* Внешний отступ снизу */
+            margin-bottom: 20px;
+            /* Увеличенный размер шрифта */
+            font-size: 1.1rem;
+        }
+        /* Стили для иконок контактов */
+        .contact-item i {
+            /* Ширина для выравнивания иконок */
+            width: 30px;
+            /* Выравнивание по центру */
+            text-align: center;
+        }
+        /* Стили для карточки члена команды */
+        .team-card {
+            /* Переход для плавной анимации */
+            transition: all 0.3s;
+        }
+        /* Эффект при наведении на карточку команды */
+        .team-card:hover {
+            /* Увеличение карточки */
+            transform: translateY(-10px);
+            /* Усиление тени */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        /* Стили для кнопок социальных сетей */
+        .social-btn {
+            /* Внешний отступ справа */
+            margin-right: 10px;
+            /* Внешний отступ снизу */
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-$END$
+    <div class="container">
+        <!-- НАВИГАЦИОННОЕ МЕНЮ -->
+        <ul class="nav nav-pills justify-content-center mb-4">
+            <li class="nav-item">
+                <!-- Ссылка на главную страницу -->
+                <a class="nav-link" href="/">🏠 Главная</a>
+            </li>
+            <li class="nav-item">
+                <!-- Ссылка на блог -->
+                <a class="nav-link" href="/blog/">📝 Блог</a>
+            </li>
+            <li class="nav-item">
+                <!-- Ссылка на контакты (АКТИВНА) -->
+                <a class="nav-link active" href="/contacts/">📞 Контакты</a>
+            </li>
+        </ul>
+
+        <!-- КАРТОЧКА С КОНТЕНТОМ КОНТАКТОВ -->
+        <div class="content-card">
+            <!-- Заголовок страницы -->
+            <h1 class="text-center mb-5">📞 {{ title }}</h1>
+
+            <!-- СЕКЦИЯ: ОСНОВНАЯ КОНТАКТНАЯ ИНФОРМАЦИЯ -->
+            <div class="contact-info">
+                <!-- h3 - заголовок секции -->
+                <h3 class="mb-4">Свяжитесь с нами</h3>
+
+                <!-- ЭЛЕМЕНТ: Email -->
+                <!-- contact-item - класс для стилизации -->
+                <div class="contact-item">
+                    <!-- Иконка конверта (эмодзи) -->
+                    <i>✉️</i>
+                    <!-- strong - жирный текст для метки -->
+                    <strong>Email:</strong>
+                    <!-- {{ contact_info.email }} - email из словаря contact_info -->
+                    <a href="mailto:{{ contact_info.email }}">{{ contact_info.email }}</a>
+                </div>
+
+                <!-- ЭЛЕМЕНТ: Телефон -->
+                <div class="contact-item">
+                    <i>📱</i>
+                    <strong>Телефон:</strong>
+                    <!-- tel: - протокол для открытия приложения для звонков -->
+                    <a href="tel:{{ contact_info.phone }}">{{ contact_info.phone }}</a>
+                </div>
+
+                <!-- ЭЛЕМЕНТ: Адрес -->
+                <div class="contact-item">
+                    <i>📍</i>
+                    <strong>Адрес:</strong>
+                    <!-- {{ contact_info.address }} - адрес из словаря -->
+                    {{ contact_info.address }}
+                </div>
+
+                <!-- ЭЛЕМЕНТ: Часы работы -->
+                <div class="contact-item">
+                    <i>🕐</i>
+                    <strong>Часы работы:</strong>
+                    <!-- {{ contact_info.work_hours }} - часы работы из словаря -->
+                    {{ contact_info.work_hours }}
+                </div>
+            </div>
+
+            <!-- РАЗДЕЛИТЕЛЬ -->
+            <hr class="my-5">
+
+            <!-- СЕКЦИЯ: СОЦИАЛЬНЫЕ СЕТИ -->
+            <h3 class="text-center mb-4">Мы в социальных сетях</h3>
+            <!-- text-center - центрирование блока -->
+            <div class="text-center mb-5">
+                <!-- КНОПКА: VKontakte -->
+                <!-- btn btn-primary - синяя кнопка -->
+                <!-- social-btn - пользовательский класс для отступов -->
+                <!-- target="_blank" - открытие ссылки в новой вкладке -->
+                <!-- rel="noopener" - защита от уязвимостей безопасности -->
+                <!-- {{ contact_info.social.vk }} - ссылка на VK из вложенного словаря -->
+                <a href="{{ contact_info.social.vk }}" target="_blank" rel="noopener" class="btn btn-primary social-btn">
+                    📘 VKontakte
+                </a>
+
+                <!-- КНОПКА: Telegram -->
+                <!-- btn btn-info - голубая кнопка -->
+                <a href="{{ contact_info.social.telegram }}" target="_blank" rel="noopener" class="btn btn-info social-btn">
+                    ✈️ Telegram
+                </a>
+
+                <!-- КНОПКА: YouTube -->
+                <!-- btn btn-danger - красная кнопка -->
+                <a href="{{ contact_info.social.youtube }}" target="_blank" rel="noopener" class="btn btn-danger social-btn">
+                    🎥 YouTube
+                </a>
+            </div>
+
+            <!-- РАЗДЕЛИТЕЛЬ -->
+            <hr class="my-5">
+
+            <!-- СЕКЦИЯ: НАША КОМАНДА -->
+            <h3 class="text-center mb-4">Наша команда</h3>
+
+            <!-- СЕТКА ИЗ КАРТОЧЕК КОМАНДЫ -->
+            <!-- row - создание строки в сетке Bootstrap -->
+            <div class="row">
+                <!-- ЦИКЛ ДЛЯ ОТОБРАЖЕНИЯ ВСЕХ ЧЛЕНОВ КОМАНДЫ -->
+                <!-- {% for member in team %} - цикл Jinja2 -->
+                <!-- team - список членов команды из Python -->
+                <!-- member - переменная для текущего члена команды -->
+                {% for member in team %}
+                    <!-- КОЛОНКА ДЛЯ ОДНОГО ЧЛЕНА КОМАНДЫ -->
+                    <!-- col-md-4 - ширина 33.33% на средних экранах -->
+                    <!-- mb-4 - внешний отступ снизу -->
+                    <div class="col-md-4 mb-4">
+                        <!-- КАРТОЧКА ЧЛЕНА КОМАНДЫ -->
+                        <!-- card - класс Bootstrap для карточки -->
+                        <!-- team-card - пользовательский класс для анимации -->
+                        <div class="card team-card">
+                            <!-- card-body - тело карточки -->
+                            <div class="card-body text-center">
+                                <!-- Иконка пользователя крупным шрифтом -->
+                                <div style="font-size: 4rem;">👤</div>
+                                <!-- ИМЯ ЧЛЕНА КОМАНДЫ -->
+                                <!-- {{ member.name }} - имя из словаря member -->
+                                <h5 class="card-title mt-3">{{ member.name }}</h5>
+                                <!-- ДОЛЖНОСТЬ -->
+                                <!-- text-muted - серый цвет текста Bootstrap -->
+                                <!-- {{ member.position }} - должность из словаря -->
+                                <p class="card-text text-muted">{{ member.position }}</p>
+                                <!-- EMAIL -->
+                                <!-- btn btn-outline-primary - кнопка с обводкой -->
+                                <!-- btn-sm - маленький размер кнопки -->
+                                <!-- mailto: - протокол для открытия почтового клиента -->
+                                <a href="mailto:{{ member.email }}" class="btn btn-outline-primary btn-sm">
+                                    ✉️ Написать
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <!-- {% endfor %} - конец цикла -->
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- ФУТЕР -->
+        <footer class="text-center text-black mt-4">
+            <p>© 2025 Мой первый сайт на Flask. Все права защищены.</p>
+        </footer>
+    </div>
 </body>
 </html>
