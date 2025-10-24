@@ -1,0 +1,128 @@
+/* Общие настройки */
+body {
+  font-family: "Poppins", "Inter", sans-serif;
+  background-color: #fdfcfb;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Контейнер с двумя колонками */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Колонка (левая и правая) */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Карточка */
+.user-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  width: 460px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+/* Мужской фон — мягкий градиент */
+.user-card.male {
+  background: linear-gradient(145deg, #fff0e5, #e5fff0, #e5f4ff);
+}
+
+/* Женский фон — более нежный пастельный */
+.user-card.female {
+  background: linear-gradient(145deg, #fff2f7, #ffe6f1, #fff4f8);
+}
+
+/* Hover эффект */
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Фото */
+.avatar img {
+  width: 150px;
+  height: 180px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Контент */
+.user-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+/* Имя */
+.user-name {
+  margin-bottom: 10px;
+}
+
+.surname {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4a3c31;
+  margin: 0;
+}
+
+.fullname {
+  font-size: 1rem;
+  color: #4a3c31;
+  margin: 4px 0 0;
+}
+
+/* Информация */
+.user-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-info li {
+  margin: 8px 0;
+}
+
+/* Чипы */
+.chip {
+  background-color: #ffffff;
+  color: #4a3c31;
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Hover эффект */
+.chip:hover {
+  background-color: #fff7ef;
+  transform: scale(1.05);
+}
+
+/* Иконки */
+.chip i {
+  color: #ff9f68;
+  font-size: 1rem;
+  width: 18px;
+  text-align: center;
+}

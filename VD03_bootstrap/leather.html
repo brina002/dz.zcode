@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- Указываем кодировку страницы, чтобы корректно отображался русский язык -->
+  <meta charset="UTF-8">
+  <!-- Указываем, что сайт должен быть адаптивным: ширина страницы подстраивается под устройство -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Заголовок страницы, отображается на вкладке браузера -->
+  <title>Мастерская кожи</title>
+  <!-- Подключаем Bootstrap 5 через CDN — это позволяет использовать все готовые стили и компоненты -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+        background-color: whitesmoke; /* Просто замените lightblue на нужный цвет */
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- ===================== ШАПКА САЙТА ===================== -->
+  <header class="bg-dark text-white py-3">
+    <!-- Контейнер для центрирования контента -->
+    <div class="container d-flex justify-content-between align-items-center">
+      <!-- Название сайта -->
+      <h1 class="h3 mb-0">Мастерская кожи</h1>
+
+      <!-- Навигационное меню -->
+      <nav>
+        <!-- nav и ul — стандартная структура меню -->
+        <ul class="nav">
+          <!-- nav-link — стиль ссылки, text-white — белый цвет текста -->
+          <li class="nav-item"><a class="nav-link text-white" href="#">Главная</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">О нас</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Галерея</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== ОСНОВНОЙ КОНТЕНТ ===================== -->
+
+  <main class="my-5">
+
+    <!-- ======== 1. СЕКЦИЯ "О НАС" С СО СЛАЙДЕРОМ ======== -->
+    <section class="container mb-5">
+      <!-- Заголовок раздела -->
+      <h2 class="text-center mb-4"></h2>
+
+      <!-- ДЛЯ УМЕНЬШЕНИЯ ШИРИНЫ: оборачиваем карусель в центрирующий контейнер с ограниченной шириной -->
+      <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8"> <!-- Ширина: 8 колонок на средних экранах, 6 на больших -->
+
+          <!-- Компонент Bootstrap — Carousel (карусель / слайдер) -->
+          <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Внутренний контейнер для слайдов -->
+            <!-- ВЫТЯНУТЫЙ ПРЯМОУГОЛЬНИК: высота 350px -->
+            <div class="carousel-inner" style="height: 350px; overflow: hidden;">
+
+              <!-- Первый слайд -->
+              <div class="carousel-item active h-100">
+                <!-- object-fit: cover чтобы изображение заполнило контейнер -->
+                <img src="slide1.jpg" class="d-block w-100 h-100" style="object-fit: cover;" alt="Изделия из кожи">
+              </div>
+
+              <!-- Второй слайд -->
+              <div class="carousel-item h-100">
+                <img src="slide2.jpg" class="d-block w-100 h-100" style="object-fit: cover;" alt="Кожаная мастерская">
+              </div>
+
+              <!-- Третий слайд -->
+              <div class="carousel-item h-100">
+                <img src="slide4.jpg" class="d-block w-100 h-100" style="object-fit: cover;" alt="Мастер за работой">
+              </div>
+            </div>
+
+            <!-- Кнопки переключения слайдов -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+        <!-- Подпись под слайдером -->
+      <p class="text-center mt-3 fs-5">
+        Уникальные украшения и изделия из натуральной кожи, вдохновленные природой и традициями.
+      </p>
+    </section>
+
+    <!-- ======== 2. СЕКЦИЯ С КАРТОЧКАМИ ======== -->
+    <section class="container mb-5">
+      <h2 class="text-center mb-4">Наши изделия</h2>
+      <!-- row — строка сетки Bootstrap -->
+      <div class="row g-4">
+      <div class="row">
+
+
+        <!-- col-12 col-md-6 col-lg-2 — адаптивная ширина: 1 колонка на маленьких, 5 на больших -->
+        <!-- Карточка 1 -->
+        <div class="col-12 col-md-6 col-lg">
+           <!-- содержимое карточки -->
+          <div class="card h-100">
+            <img src="leather_bracelet.jpg" class="card-img-top" alt="Кожаный браслет">
+            <div class="card-body text-center">
+              <h5 class="card-title">Кожаный браслет</h5>
+              <p class="card-text">Ручная работа с использованием натуральной кожи высокого качества.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg">
+          <div class="card h-100">
+            <img src="leather_belts.jpg" class="card-img-top" alt="Кожаный ремень">
+            <div class="card-body text-center">
+              <h5 class="card-title">Кожаный ремень</h5>
+              <p class="card-text">Прочные и стильные ремни, изготовленные вручную мастерами своего дела.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg">
+          <div class="card h-100">
+            <img src="leather_handbag.jpg" class="card-img-top" alt="Кожаная сумка">
+            <div class="card-body text-center">
+              <h5 class="card-title">Кожаная сумка</h5>
+              <p class="card-text">Элегантные сумки с уникальным дизайном для настоящих ценителей стиля.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg">
+          <div class="card h-100">
+            <img src="leather_wallet2.jpg" class="card-img-top" alt="Кожаный кошелек">
+            <div class="card-body text-center">
+              <h5 class="card-title">Кожаный кошелек</h5>
+              <p class="card-text">Удобные и долговечные кошельки из мягкой натуральной кожи.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg">
+          <div class="card h-100">
+            <img src="leather_jewelry_set.jpg" class="card-img-top" alt="Кожаное украшение">
+            <div class="card-body text-center">
+              <h5 class="card-title">Кожаное украшение</h5>
+              <p class="card-text">Оригинальные аксессуары, подчеркивающие индивидуальность и стиль.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======== 3. СЕКЦИЯ С АККОРДЕОНОМ ======== -->
+    <section class="container mb-5">
+      <h2 class="text-center mb-4">Полезная информация</h2>
+
+      <!-- Аккордеон Bootstrap -->
+      <div class="accordion" id="infoAccordion">
+        <!-- Первый элемент -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+              Как ухаживать за изделиями из кожи?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#infoAccordion">
+            <div class="accordion-body">
+              Протирайте изделия мягкой сухой тканью, избегайте избыточной влаги и прямых солнечных лучей. Используйте специальные кремы для кожи для сохранения эластичности.
+            </div>
+          </div>
+        </div>
+
+        <!-- Второй элемент -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+              Чем отличаются наши изделия?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#infoAccordion">
+            <div class="accordion-body">
+              Все изделия изготавливаются вручную, что делает каждое из них уникальным. Мы используем только натуральную кожу и экологичные материалы.
+            </div>
+          </div>
+        </div>
+
+        <!-- Третий элемент -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+              Можно ли заказать индивидуальный дизайн?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#infoAccordion">
+            <div class="accordion-body">
+              Да! Мы принимаем индивидуальные заказы. Вы можете выбрать форму, цвет и фурнитуру по своему вкусу.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== ФУТЕР ===================== -->
+  <footer class="bg-dark text-white text-center py-4">
+    <p class="mb-1">© 2025 MyLeather — Все права защищены.</p>
+    <p class="mb-2">Свяжитесь с нами: <a href="mailto:info@example.com" class="text-white">info@example.com</a></p>
+    <!-- Иконки социальных сетей -->
+    <div>
+      <a href="#" class="text-white me-3">VK</a>
+      <a href="#" class="text-white me-3">Telegram</a>
+      <a href="#" class="text-white">OK</a>
+    </div>
+  </footer>
+
+  <!-- Подключаем JS Bootstrap для работы интерактивных элементов: слайдеров, аккордеона и т.п. -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
