@@ -1,0 +1,301 @@
+{% extends 'base.html' %}
+
+{% block title %}Каталог курсов - CourseHub{% endblock %}
+
+{% block content %}
+<!-- Hero секция -->
+<section class="gradient-bg text-white py-5">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-3">Каталог курсов</h1>
+        <p class="lead opacity-90">Найдите идеальный курс для достижения ваших целей</p>
+    </div>
+</section>
+
+<!-- Фильтры и поиск -->
+<section class="py-4 bg-light">
+    <div class="container">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text">
+                        <i class="bi bi-search"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Поиск курса...">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <select class="form-select form-select-lg">
+                    <option selected>Все категории</option>
+                    <option>Программирование</option>
+                    <option>Дизайн</option>
+                    <option>Маркетинг</option>
+                    <option>Бизнес</option>
+                    <option>Языки</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="form-select form-select-lg">
+                    <option selected>Сортировка</option>
+                    <option>По популярности</option>
+                    <option>По рейтингу</option>
+                    <option>По дате</option>
+                    <option>По цене</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Список курсов -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Курс 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <div class="position-relative">
+                        <div class="card-img-top bg-primary text-white d-flex align-items-center justify-content-center"
+                             style="height: 200px;">
+                            <i class="bi bi-code-slash fs-1"></i>
+                        </div>
+                        <span class="badge bg-danger position-absolute top-0 end-0 m-3">Хит</span>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <div class="badge bg-primary mb-2 align-self-start">Программирование</div>
+                        <h5 class="card-title fw-bold">Python для начинающих</h5>
+                        <p class="card-text text-muted">
+                            Полный курс по Python от основ до создания реальных проектов.
+                            Идеально для новичков в программировании.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <span class="fw-bold">4.8</span>
+                                    <small class="text-muted">(342)</small>
+                                </div>
+                                <div class="text-muted">
+                                    <i class="bi bi-people"></i> 1,234
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-clock"></i>
+                                    <small>40 часов</small>
+                                </div>
+                                <a href="#" class="btn btn-gradient btn-sm">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Курс 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <div class="position-relative">
+                        <div class="card-img-top bg-success text-white d-flex align-items-center justify-content-center"
+                             style="height: 200px;">
+                            <i class="bi bi-palette fs-1"></i>
+                        </div>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <div class="badge bg-success mb-2 align-self-start">Дизайн</div>
+                        <h5 class="card-title fw-bold">UI/UX дизайн с нуля</h5>
+                        <p class="card-text text-muted">
+                            Научитесь создавать красивые и удобные интерфейсы.
+                            Работа с Figma, прототипирование и UX-исследования.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <span class="fw-bold">4.9</span>
+                                    <small class="text-muted">(289)</small>
+                                </div>
+                                <div class="text-muted">
+                                    <i class="bi bi-people"></i> 892
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-clock"></i>
+                                    <small>35 часов</small>
+                                </div>
+                                <a href="#" class="btn btn-gradient btn-sm">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Курс 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <div class="position-relative">
+                        <div class="card-img-top bg-danger text-white d-flex align-items-center justify-content-center"
+                             style="height: 200px;">
+                            <i class="bi bi-megaphone fs-1"></i>
+                        </div>
+                        <span class="badge bg-success position-absolute top-0 end-0 m-3">Новинка</span>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <div class="badge bg-danger mb-2 align-self-start">Маркетинг</div>
+                        <h5 class="card-title fw-bold">Digital-маркетинг 2024</h5>
+                        <p class="card-text text-muted">
+                            Актуальные инструменты интернет-маркетинга, SMM,
+                            контекстная реклама и аналитика.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <span class="fw-bold">4.7</span>
+                                    <small class="text-muted">(156)</small>
+                                </div>
+                                <div class="text-muted">
+                                    <i class="bi bi-people"></i> 567
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-clock"></i>
+                                    <small>30 часов</small>
+                                </div>
+                                <a href="#" class="btn btn-gradient btn-sm">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Курс 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <div class="card-img-top bg-warning text-white d-flex align-items-center justify-content-center"
+                         style="height: 200px;">
+                        <i class="bi bi-briefcase fs-1"></i>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <div class="badge bg-warning mb-2 align-self-start">Бизнес</div>
+                        <h5 class="card-title fw-bold">Основы бизнеса</h5>
+                        <p class="card-text text-muted">
+                            От бизнес-идеи до запуска стартапа. Финансы,
+                            маркетинг, продажи и управление командой.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <span class="fw-bold">4.6</span>
+                                    <small class="text-muted">(198)</small>
+                                </div>
+                                <div class="text-muted">
+                                    <i class="bi bi-people"></i> 423
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-clock"></i>
+                                    <small>45 часов</small>
+                                </div>
+                                <a href="#" class="btn btn-gradient btn-sm">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Курс 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <div class="card-img-top bg-info text-white d-flex align-items-center justify-content-center"
+                         style="height: 200px;">
+                        <i class="bi bi-translate fs-1"></i>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <div class="badge bg-info mb-2 align-self-start">Языки</div>
+                        <h5 class="card-title fw-bold">Английский для IT</h5>
+                        <p class="card-text text-muted">
+                            Технический английский для программистов и IT-специалистов.
+                            Профессиональная лексика и практика общения.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <span class="fw-bold">4.9</span>
+                                    <small class="text-muted">(234)</small>
+                                </div>
+                                <div class="text-muted">
+                                    <i class="bi bi-people"></i> 789
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-clock"></i>
+                                    <small>50 часов</small>
+                                </div>
+                                <a href="#" class="btn btn-gradient btn-sm">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Курс 6 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <div class="card-img-top bg-dark text-white d-flex align-items-center justify-content-center"
+                         style="height: 200px;">
+                        <i class="bi bi-laptop fs-1"></i>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <div class="badge bg-primary mb-2 align-self-start">Программирование</div>
+                        <h5 class="card-title fw-bold">Web-разработка</h5>
+                        <p class="card-text text-muted">
+                            Создание современных веб-приложений. HTML, CSS,
+                            JavaScript, React и backend на Django.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <span class="fw-bold">4.8</span>
+                                    <small class="text-muted">(412)</small>
+                                </div>
+                                <div class="text-muted">
+                                    <i class="bi bi-people"></i> 1,456
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-clock"></i>
+                                    <small>60 часов</small>
+                                </div>
+                                <a href="#" class="btn btn-gradient btn-sm">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Пагинация -->
+        <nav class="mt-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link">Предыдущая</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Следующая</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+{% endblock %}

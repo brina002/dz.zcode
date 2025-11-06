@@ -1,0 +1,225 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная - CourseHub{% endblock %}
+
+{% block content %}
+<!-- Hero секция -->
+<section class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-3 fw-bold mb-4">
+            Добро пожаловать в CourseHub
+        </h1>
+        <p class="lead mb-5 fs-4 opacity-90">
+            Платформа онлайн-обучения нового поколения.<br>
+            Изучайте то, что действительно важно для вашей карьеры.
+        </p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a href="{% url 'catalog' %}" class="btn btn-light btn-lg px-5 py-3">
+                <i class="bi bi-search me-2"></i>
+                Найти курс
+            </a>
+            <a href="{% url 'about' %}" class="btn btn-outline-light btn-lg px-5 py-3">
+                <i class="bi bi-info-circle me-2"></i>
+                Узнать больше
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Преимущества -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center section-title">Почему выбирают нас</h2>
+
+        <div class="row g-4 mt-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 text-center p-4">
+                    <div class="mb-3">
+                        <i class="bi bi-book-half fs-1 text-primary"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">247+ курсов</h5>
+                    <p class="card-text text-muted">
+                        Широкий выбор курсов по программированию, дизайну,
+                        маркетингу и другим востребованным направлениям.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 text-center p-4">
+                    <div class="mb-3">
+                        <i class="bi bi-people-fill fs-1 text-primary"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">89 экспертов</h5>
+                    <p class="card-text text-muted">
+                        Опытные преподаватели-практики с многолетним опытом
+                        работы в ведущих компаниях индустрии.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 text-center p-4">
+                    <div class="mb-3">
+                        <i class="bi bi-trophy-fill fs-1 text-primary"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">Сертификаты</h5>
+                    <p class="card-text text-muted">
+                        Получите признанные сертификаты после успешного
+                        завершения курсов для вашего портфолио.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 text-center p-4">
+                    <div class="mb-3">
+                        <i class="bi bi-clock-history fs-1 text-primary"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">Гибкий график</h5>
+                    <p class="card-text text-muted">
+                        Учитесь в удобное время и в комфортном темпе.
+                        Материалы доступны 24/7 с любого устройства.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 text-center p-4">
+                    <div class="mb-3">
+                        <i class="bi bi-chat-dots-fill fs-1 text-primary"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">Поддержка 24/7</h5>
+                    <p class="card-text text-muted">
+                        Наша команда всегда готова помочь вам с любыми
+                        вопросами на протяжении всего обучения.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 text-center p-4">
+                    <div class="mb-3">
+                        <i class="bi bi-graph-up-arrow fs-1 text-primary"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">Карьерный рост</h5>
+                    <p class="card-text text-muted">
+                        92% наших выпускников успешно применяют полученные
+                        знания в работе или находят новую работу.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Популярные курсы (превью) -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center section-title">Популярные курсы</h2>
+
+        <div class="row g-4 mt-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="badge bg-primary mb-3">Программирование</div>
+                        <h5 class="card-title">Python для начинающих</h5>
+                        <p class="card-text text-muted small">
+                            Изучите основы Python с нуля и создайте свои первые проекты.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <small class="text-muted">
+                                <i class="bi bi-star-fill text-warning"></i> 4.8
+                            </small>
+                            <small class="text-muted">
+                                <i class="bi bi-people"></i> 1,234
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="badge bg-success mb-3">Дизайн</div>
+                        <h5 class="card-title">UI/UX дизайн</h5>
+                        <p class="card-text text-muted small">
+                            Создавайте красивые и удобные интерфейсы для веб и мобильных приложений.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <small class="text-muted">
+                                <i class="bi bi-star-fill text-warning"></i> 4.9
+                            </small>
+                            <small class="text-muted">
+                                <i class="bi bi-people"></i> 892
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="badge bg-danger mb-3">Маркетинг</div>
+                        <h5 class="card-title">Digital-маркетинг</h5>
+                        <p class="card-text text-muted small">
+                            Освойте инструменты интернет-маркетинга и продвижения в соцсетях.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <small class="text-muted">
+                                <i class="bi bi-star-fill text-warning"></i> 4.7
+                            </small>
+                            <small class="text-muted">
+                                <i class="bi bi-people"></i> 567
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="badge bg-warning mb-3">Бизнес</div>
+                        <h5 class="card-title">Основы бизнеса</h5>
+                        <p class="card-text text-muted small">
+                            Узнайте, как создать и развивать успешный бизнес с нуля.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <small class="text-muted">
+                                <i class="bi bi-star-fill text-warning"></i> 4.6
+                            </small>
+                            <small class="text-muted">
+                                <i class="bi bi-people"></i> 423
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="{% url 'catalog' %}" class="btn btn-gradient btn-lg px-5">
+                Смотреть все курсы
+                <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA секция -->
+<section class="gradient-bg text-white py-5">
+    <div class="container text-center">
+        <h2 class="display-5 fw-bold mb-4">Готовы начать обучение?</h2>
+        <p class="lead mb-4 opacity-90">
+            Присоединяйтесь к 5,432 студентам, которые уже учатся на CourseHub
+        </p>
+        <a href="#" class="btn btn-light btn-lg px-5 py-3">
+            <i class="bi bi-person-plus me-2"></i>
+            Зарегистрироваться бесплатно
+        </a>
+    </div>
+</section>
+{% endblock %}

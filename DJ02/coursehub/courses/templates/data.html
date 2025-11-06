@@ -1,0 +1,371 @@
+{% extends 'base.html' %}
+
+{% block title %}Данные и статистика - CourseHub{% endblock %}
+
+{% block content %}
+<!-- Hero секция -->
+<section class="gradient-bg text-white py-5">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-3">Статистика платформы</h1>
+        <p class="lead opacity-90">Актуальные данные о CourseHub в реальном времени</p>
+    </div>
+</section>
+
+<!-- Основная статистика -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="card border-0 shadow-sm text-center p-4 h-100 gradient-bg text-white">
+                    <i class="bi bi-book-fill fs-1 mb-3"></i>
+                    <h2 class="fw-bold display-4 mb-2">247</h2>
+                    <p class="mb-0 opacity-90">Всего курсов</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card border-0 shadow-sm text-center p-4 h-100" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white;">
+                    <i class="bi bi-people-fill fs-1 mb-3"></i>
+                    <h2 class="fw-bold display-4 mb-2">5,432</h2>
+                    <p class="mb-0 opacity-90">Студентов</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card border-0 shadow-sm text-center p-4 h-100" style="background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%); color: white;">
+                    <i class="bi bi-person-badge-fill fs-1 mb-3"></i>
+                    <h2 class="fw-bold display-4 mb-2">89</h2>
+                    <p class="mb-0 opacity-90">Преподавателей</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card border-0 shadow-sm text-center p-4 h-100" style="background: linear-gradient(135deg, #dc3545 0%, #e83e8c 100%); color: white;">
+                    <i class="bi bi-chat-quote-fill fs-1 mb-3"></i>
+                    <h2 class="fw-bold display-4 mb-2">1,256</h2>
+                    <p class="mb-0 opacity-90">Отзывов</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Статистика по категориям -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Популярные категории курсов</h2>
+
+        <div class="table-responsive">
+            <table class="table table-hover bg-white shadow-sm rounded">
+                <thead class="gradient-bg text-white">
+                    <tr>
+                        <th scope="col" class="py-3">
+                            <i class="bi bi-tag-fill me-2"></i>Категория
+                        </th>
+                        <th scope="col" class="py-3">
+                            <i class="bi bi-book me-2"></i>Курсов
+                        </th>
+                        <th scope="col" class="py-3">
+                            <i class="bi bi-people me-2"></i>Студентов
+                        </th>
+                        <th scope="col" class="py-3">
+                            <i class="bi bi-star-fill me-2"></i>Рейтинг
+                        </th>
+                        <th scope="col" class="py-3">
+                            <i class="bi bi-graph-up me-2"></i>Рост
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-3">
+                            <span class="badge bg-primary me-2">
+                                <i class="bi bi-code-slash"></i>
+                            </span>
+                            <strong>Программирование</strong>
+                        </td>
+                        <td class="py-3">87</td>
+                        <td class="py-3">2,341</td>
+                        <td class="py-3">
+                            <span class="text-warning">
+                                ★★★★★
+                            </span>
+                            4.8
+                        </td>
+                        <td class="py-3">
+                            <span class="badge bg-success">
+                                <i class="bi bi-arrow-up"></i> +15%
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="py-3">
+                            <span class="badge bg-success me-2">
+                                <i class="bi bi-palette"></i>
+                            </span>
+                            <strong>Дизайн</strong>
+                        </td>
+                        <td class="py-3">54</td>
+                        <td class="py-3">1,567</td>
+                        <td class="py-3">
+                            <span class="text-warning">
+                                ★★★★★
+                            </span>
+                            4.7
+                        </td>
+                        <td class="py-3">
+                            <span class="badge bg-success">
+                                <i class="bi bi-arrow-up"></i> +22%
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="py-3">
+                            <span class="badge bg-danger me-2">
+                                <i class="bi bi-megaphone"></i>
+                            </span>
+                            <strong>Маркетинг</strong>
+                        </td>
+                        <td class="py-3">42</td>
+                        <td class="py-3">892</td>
+                        <td class="py-3">
+                            <span class="text-warning">
+                                ★★★★☆
+                            </span>
+                            4.6
+                        </td>
+                        <td class="py-3">
+                            <span class="badge bg-success">
+                                <i class="bi bi-arrow-up"></i> +18%
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="py-3">
+                            <span class="badge bg-warning me-2">
+                                <i class="bi bi-briefcase"></i>
+                            </span>
+                            <strong>Бизнес</strong>
+                        </td>
+                        <td class="py-3">38</td>
+                        <td class="py-3">456</td>
+                        <td class="py-3">
+                            <span class="text-warning">
+                                ★★★★☆
+                            </span>
+                            4.5
+                        </td>
+                        <td class="py-3">
+                            <span class="badge bg-warning text-dark">
+                                <i class="bi bi-dash"></i> +5%
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="py-3">
+                            <span class="badge bg-info me-2">
+                                <i class="bi bi-translate"></i>
+                            </span>
+                            <strong>Языки</strong>
+                        </td>
+                        <td class="py-3">26</td>
+                        <td class="py-3">176</td>
+                        <td class="py-3">
+                            <span class="text-warning">
+                                ★★★★★
+                            </span>
+                            4.9
+                        </td>
+                        <td class="py-3">
+                            <span class="badge bg-success">
+                                <i class="bi bi-arrow-up"></i> +30%
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Графики активности -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Активность на платформе</h2>
+
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-header gradient-bg text-white py-3">
+                        <h5 class="mb-0">
+                            <i class="bi bi-calendar-week me-2"></i>
+                            Регистрации за неделю
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-3">
+                            <div>
+                                <small class="text-muted">Понедельник</small>
+                                <div class="progress" style="height: 25px;">
+                                    <div class="progress-bar bg-primary" style="width: 85%">85</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <div class="w-100">
+                                <small class="text-muted">Вторник</small>
+                                <div class="progress" style="height: 25px;">
+                                    <div class="progress-bar bg-primary" style="width: 92%">92</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <div class="w-100">
+                                <small class="text-muted">Среда</small>
+                                <div class="progress" style="height: 25px;">
+                                    <div class="progress-bar bg-primary" style="width: 78%">78</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <div class="w-100">
+                                <small class="text-muted">Четверг</small>
+                                <div class="progress" style="height: 25px;">
+                                    <div class="progress-bar bg-primary" style="width: 95%">95</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <div class="w-100">
+                                <small class="text-muted">Пятница</small>
+                                <div class="progress" style="height: 25px;">
+                                    <div class="progress-bar bg-primary" style="width: 88%">88</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <div class="w-100">
+                                <small class="text-muted">Суббота</small>
+                                <div class="progress" style="height: 25px;">
+                                    <div class="progress-bar bg-primary" style="width: 65%">65</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="w-100">
+                                <small class="text-muted">Воскресенье</small>
+                                <div class="progress" style="height: 25px;">
+                                    <div class="progress-bar bg-primary" style="width: 58%">58</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-header gradient-bg text-white py-3">
+                        <h5 class="mb-0">
+                            <i class="bi bi-trophy me-2"></i>
+                            Топ-5 курсов по завершению
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="fw-bold">Python для начинающих</span>
+                                <span class="badge bg-success">342 завершили</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-success" style="width: 95%"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="fw-bold">UI/UX дизайн</span>
+                                <span class="badge bg-success">289 завершили</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-success" style="width: 82%"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="fw-bold">Web-разработка</span>
+                                <span class="badge bg-success">267 завершили</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-success" style="width: 76%"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="fw-bold">Digital-маркетинг</span>
+                                <span class="badge bg-success">234 завершили</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-success" style="width: 68%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="fw-bold">Английский для IT</span>
+                                <span class="badge bg-success">198 завершили</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-success" style="width: 58%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Дополнительные метрики -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Ключевые показатели</h2>
+
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm text-center p-4">
+                    <i class="bi bi-clock-history fs-1 text-primary mb-3"></i>
+                    <h4 class="fw-bold">12,345</h4>
+                    <p class="text-muted mb-0">Часов обучения</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm text-center p-4">
+                    <i class="bi bi-award fs-1 text-success mb-3"></i>
+                    <h4 class="fw-bold">892</h4>
+                    <p class="text-muted mb-0">Выдано сертификатов</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm text-center p-4">
+                    <i class="bi bi-percent fs-1 text-warning mb-3"></i>
+                    <h4 class="fw-bold">92%</h4>
+                    <p class="text-muted mb-0">Успешность завершения</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm text-center p-4">
+                    <i class="bi bi-hand-thumbs-up fs-1 text-danger mb-3"></i>
+                    <h4 class="fw-bold">4.8/5</h4>
+                    <p class="text-muted mb-0">Средняя оценка</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
